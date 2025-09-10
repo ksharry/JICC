@@ -1,4 +1,4 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *.class
@@ -25,7 +25,7 @@ MANIFEST
 venv/
 env/
 ENV/
-ji_erp/
+.venv_py31/
 .venv/
 
 # IDE

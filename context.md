@@ -1,123 +1,123 @@
-﻿# JI ERP 開發上下文文檔
+# JICC �}�o�W�U�����
 
-## 項目概述
-JI ERP 是一個企業資源規劃系統，旨在為中小企業提供完整的業務管理解決方案。
+## ���ط��z
+JICC �O�@�ӥ��~�귽�W���t�ΡA���b�����p���~���ѧ��㪺�~�Ⱥ޲z�ѨM��סC
 
-## 當前狀態
-- 已有基礎的 FastAPI 後端框架
-- 使用 SQLite 數據庫
-- 包含基本的用戶認證和交易管理功能
-- 簡單的 HTML 前端界面
+## ���e���A
+- �w����¦�� FastAPI ��ݮج[
+- �ϥ� SQLite �ƾڮw
+- �]�t�򥻪��Τ�{�ҩM����޲z�\��
+- ²�檺 HTML �e�ݬɭ�
 
-## 目標架構
+## �ؼЬ[�c
 
-### 後端技術棧
-- **框架**: FastAPI (Python 3.9+)
+### ��ݧ޳N��
+- **�ج[**: FastAPI (Python 3.9+)
 - **ORM**: SQLAlchemy
-- **數據庫**: PostgreSQL (生產環境) / SQLite (開發環境)
-- **認證**: JWT + OAuth2
-- **緩存**: Redis
-- **任務隊列**: Celery
-- **文檔**: Swagger/OpenAPI
+- **�ƾڮw**: PostgreSQL (�Ͳ�����) / SQLite (�}�o����)
+- **�{��**: JWT + OAuth2
+- **�w�s**: Redis
+- **���ȶ��C**: Celery
+- **����**: Swagger/OpenAPI
 
-### 前端技術棧
-- **框架**: React 18 + TypeScript
-- **UI 庫**: Material-UI (MUI) 或 Ant Design
-- **狀態管理**: Redux Toolkit + RTK Query
-- **路由**: React Router v6
-- **表單**: React Hook Form + Yup
-- **圖表**: Chart.js 或 Recharts
+### �e�ݧ޳N��
+- **�ج[**: React 18 + TypeScript
+- **UI �w**: Material-UI (MUI) �� Ant Design
+- **���A�޲z**: Redux Toolkit + RTK Query
+- **����**: React Router v6
+- **����**: React Hook Form + Yup
+- **�Ϫ�**: Chart.js �� Recharts
 
-### 數據庫設計
+### �ƾڮw�]�p
 
-#### 核心實體
-1. **用戶管理**
-   - users (用戶表)
-   - roles (角色表)
-   - permissions (權限表)
-   - user_roles (用戶角色關聯)
+#### �֤߹���
+1. **�Τ�޲z**
+   - users (�Τ��)
+   - roles (�����)
+   - permissions (�v����)
+   - user_roles (�Τᨤ�����p)
 
-2. **財務管理**
-   - accounts (會計科目)
-   - transactions (交易記錄)
-   - invoices (發票)
-   - payments (付款記錄)
+2. **�]�Ⱥ޲z**
+   - accounts (�|�p���)
+   - transactions (����O��)
+   - invoices (�o��)
+   - payments (�I�ڰO��)
 
-3. **庫存管理**
-   - products (產品表)
-   - categories (產品分類)
-   - inventory (庫存記錄)
-   - suppliers (供應商)
+3. **�w�s�޲z**
+   - products (���~��)
+   - categories (���~����)
+   - inventory (�w�s�O��)
+   - suppliers (������)
 
-4. **客戶關係**
-   - customers (客戶表)
-   - contacts (聯繫人)
-   - orders (訂單)
-   - quotations (報價單)
+4. **�Ȥ����Y**
+   - customers (�Ȥ��)
+   - contacts (�pô�H)
+   - orders (�q��)
+   - quotations (������)
 
-5. **系統管理**
-   - companies (公司信息)
-   - settings (系統設置)
-   - audit_logs (審計日誌)
+5. **�t�κ޲z**
+   - companies (���q�H��)
+   - settings (�t�γ]�m)
+   - audit_logs (�f�p��x)
 
-## 功能模塊
+## �\��Ҷ�
 
-### 1. 用戶認證與權限
-- 用戶註冊/登入
-- 角色權限管理
-- 密碼重置
-- 多因子認證
+### 1. �Τ�{�һP�v��
+- �Τ���U/�n�J
+- �����v���޲z
+- �K�X���m
+- �h�]�l�{��
 
-### 2. 財務管理
-- 會計科目管理
-- 收入/支出記錄
-- 發票管理
-- 財務報表
-- 預算管理
+### 2. �]�Ⱥ޲z
+- �|�p��غ޲z
+- ���J/��X�O��
+- �o���޲z
+- �]�ȳ���
+- �w��޲z
 
-### 3. 庫存管理
-- 產品管理
-- 庫存進出
-- 庫存盤點
-- 庫存報警
-- 供應商管理
+### 3. �w�s�޲z
+- ���~�޲z
+- �w�s�i�X
+- �w�s�L�I
+- �w�s��ĵ
+- �����Ӻ޲z
 
-### 4. 銷售管理
-- 客戶管理
-- 報價單管理
-- 訂單管理
-- 發票開立
-- 收款管理
+### 4. �P��޲z
+- �Ȥ�޲z
+- ������޲z
+- �q��޲z
+- �o���}��
+- ���ں޲z
 
-### 5. 採購管理
-- 供應商管理
-- 採購申請
-- 採購訂單
-- 收貨管理
-- 付款管理
+### 5. ���ʺ޲z
+- �����Ӻ޲z
+- ���ʥӽ�
+- ���ʭq��
+- ���f�޲z
+- �I�ں޲z
 
-### 6. 報表分析
-- 財務報表
-- 銷售分析
-- 庫存分析
-- 客戶分析
-- 自定義報表
+### 6. �������R
+- �]�ȳ���
+- �P����R
+- �w�s���R
+- �Ȥ���R
+- �۩w�q����
 
-## API 設計原則
+## API �]�p��h
 
-### RESTful API 規範
-- 使用標準 HTTP 方法 (GET, POST, PUT, DELETE)
-- 統一的響應格式
-- 適當的 HTTP 狀態碼
-- 分頁和過濾支持
-- API 版本控制
+### RESTful API �W�d
+- �ϥμз� HTTP ��k (GET, POST, PUT, DELETE)
+- �Τ@���T���榡
+- �A���� HTTP ���A�X
+- �����M�L�o���
+- API ��������
 
-### 響應格式
+### �T���榡
 ```json
 {
   "success": true,
   "data": {},
-  "message": "操作成功",
+  "message": "�ާ@���\",
   "errors": [],
   "pagination": {
     "page": 1,
@@ -128,153 +128,153 @@ JI ERP 是一個企業資源規劃系統，旨在為中小企業提供完整的�
 }
 ```
 
-## 安全考慮
+## �w���Ҽ{
 
-### 認證與授權
-- JWT Token 認證
-- 角色基礎的訪問控制 (RBAC)
-- API 速率限制
-- CORS 配置
+### �{�һP���v
+- JWT Token �{��
+- �����¦���X�ݱ��� (RBAC)
+- API �t�v����
+- CORS �t�m
 
-### 數據安全
-- 輸入驗證和清理
-- SQL 注入防護
-- XSS 防護
-- CSRF 防護
-- 數據加密
+### �ƾڦw��
+- ��J���ҩM�M�z
+- SQL �`�J���@
+- XSS ���@
+- CSRF ���@
+- �ƾڥ[�K
 
-## 性能要求
+## �ʯ�n�D
 
-### 響應時間
-- API 響應時間 < 200ms
-- 頁面加載時間 < 3s
-- 數據庫查詢優化
+### �T���ɶ�
+- API �T���ɶ� < 200ms
+- �����[���ɶ� < 3s
+- �ƾڮw�d���u��
 
-### 可擴展性
-- 支持 1000+ 並發用戶
-- 微服務架構準備
-- 水平擴展能力
+### �i�X�i��
+- ��� 1000+ �õo�Τ�
+- �L�A�Ȭ[�c�ǳ�
+- �����X�i��O
 
-## 開發環境
+## �}�o����
 
-### 本地開發
+### ���a�}�o
 - Python 3.9+
 - Node.js 18+
 - PostgreSQL 14+
 - Redis 6+
-- Docker (可選)
+- Docker (�i��)
 
-### 工具鏈
-- Git 版本控制
+### �u����
+- Git ��������
 - Pre-commit hooks
-- 自動化測試
-- CI/CD 管道
-- 代碼質量檢查
+- �۰ʤƴ���
+- CI/CD �޹D
+- �N�X��q�ˬd
 
-## 部署架構
+## ���p�[�c
 
-### 開發環境
-- 本地 Docker Compose
-- 熱重載支持
-- 調試工具集成
+### �}�o����
+- ���a Docker Compose
+- ���������
+- �ոդu�㶰��
 
-### 生產環境
-- Docker 容器化
-- Kubernetes 編排
-- 負載均衡
-- 數據庫集群
-- 監控和日誌
+### �Ͳ�����
+- Docker �e����
+- Kubernetes �s��
+- �t������
+- �ƾڮw���s
+- �ʱ��M��x
 
-## 測試策略
+## ���յ���
 
-### 單元測試
-- 後端 API 測試
-- 前端組件測試
-- 業務邏輯測試
+### �椸����
+- ��� API ����
+- �e�ݲե����
+- �~���޿����
 
-### 集成測試
-- API 集成測試
-- 數據庫集成測試
-- 端到端測試
+### ��������
+- API ��������
+- �ƾڮw��������
+- �ݨ�ݴ���
 
-### 性能測試
-- 負載測試
-- 壓力測試
-- 數據庫性能測試
+### �ʯ����
+- �t������
+- ���O����
+- �ƾڮw�ʯ����
 
-## 文檔要求
+## ���ɭn�D
 
-### 技術文檔
-- API 文檔 (Swagger)
-- 數據庫設計文檔
-- 部署文檔
-- 開發指南
+### �޳N����
+- API ���� (Swagger)
+- �ƾڮw�]�p����
+- ���p����
+- �}�o���n
 
-### 用戶文檔
-- 用戶手冊
-- 管理員指南
-- 常見問題
-- 視頻教程
+### �Τ����
+- �Τ��U
+- �޲z�����n
+- �`�����D
+- ���W�е{
 
-## 里程碑規劃
+## ���{�O�W��
 
-### Phase 1: 基礎架構 (2-3 週)
-- 項目結構搭建
-- 數據庫設計
-- 用戶認證系統
-- 基礎 API 框架
+### Phase 1: ��¦�[�c (2-3 �g)
+- ���ص��c�f��
+- �ƾڮw�]�p
+- �Τ�{�Ҩt��
+- ��¦ API �ج[
 
-### Phase 2: 核心功能 (4-5 週)
-- 財務管理模塊
-- 庫存管理模塊
-- 前端基礎框架
-- 基礎 UI 組件
+### Phase 2: �֤ߥ\�� (4-5 �g)
+- �]�Ⱥ޲z�Ҷ�
+- �w�s�޲z�Ҷ�
+- �e�ݰ�¦�ج[
+- ��¦ UI �ե�
 
-### Phase 3: 業務功能 (6-8 週)
-- 銷售管理模塊
-- 採購管理模塊
-- 報表分析功能
-- 高級 UI 功能
+### Phase 3: �~�ȥ\�� (6-8 �g)
+- �P��޲z�Ҷ�
+- ���ʺ޲z�Ҷ�
+- �������R�\��
+- ���� UI �\��
 
-### Phase 4: 優化部署 (2-3 週)
-- 性能優化
-- 安全加固
-- 測試完善
-- 部署上線
+### Phase 4: �u�Ƴ��p (2-3 �g)
+- �ʯ��u��
+- �w���[�T
+- ���է���
+- ���p�W�u
 
-## 技術債務管理
-- 代碼重構計劃
-- 技術選型評估
-- 性能瓶頸識別
-- 安全漏洞修復
+## �޳N�ŰȺ޲z
+- �N�X���c�p��
+- �޳N�﫬����
+- �ʯ�~�V�ѧO
+- �w���|�}�״_
 
-## 開發策略 (教學導向)
+## �}�o���� (�оǾɦV)
 
-### 極簡版起步
-我們採用循序漸進的開發策略，從最簡單的版本開始：
+### ��²���_�B
+�ڭ̱ĥδ`�Ǻ��i���}�o�����A�q��²�檺�����}�l�G
 
-#### 第一階段：極簡版 (1-2週)
-- 使用 SQLite + 原生 SQL
-- 純 HTML/CSS/JavaScript 前端
-- 基礎的 CRUD 操作
-- 簡單的認證系統
+#### �Ĥ@���q�G��²�� (1-2�g)
+- �ϥ� SQLite + ��� SQL
+- �� HTML/CSS/JavaScript �e��
+- ��¦�� CRUD �ާ@
+- ²�檺�{�Ҩt��
 
-#### 第二階段：標準版 (3-4週)
-- 升級到 PostgreSQL + SQLAlchemy
-- React + TypeScript 前端
-- JWT 認證
-- 基礎的權限管理
+#### �ĤG���q�G�зǪ� (3-4�g)
+- �ɯŨ� PostgreSQL + SQLAlchemy
+- React + TypeScript �e��
+- JWT �{��
+- ��¦���v���޲z
 
-#### 第三階段：企業版 (6-8週)
-- 微服務架構
-- 完整的權限系統
-- 高級功能模塊
-- 性能優化
+#### �ĤT���q�G���~�� (6-8�g)
+- �L�A�Ȭ[�c
+- ���㪺�v���t��
+- ���ť\��Ҷ�
+- �ʯ��u��
 
-### 學習目標
-- 理解 ERP 系統基本架構
-- 掌握現代 Web 開發技術
-- 學習企業級應用設計模式
-- 培養全端開發能力
+### �ǲߥؼ�
+- �z�� ERP �t�ΰ򥻬[�c
+- �x���{�N Web �}�o�޳N
+- �ǲߥ��~�����γ]�p�Ҧ�
+- ���i���ݶ}�o��O
 
-這個文檔將隨著項目進展持續更新，確保所有團隊成員對項目有清晰的理解。
+�o�Ӥ��ɱN�H�۶��ضi�i�����s�A�T�O�Ҧ��ζ������ﶵ�ئ��M�����z�ѡC

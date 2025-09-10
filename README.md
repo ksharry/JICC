@@ -1,258 +1,260 @@
-ï»¿# JI ERP ä¼æ¥­è³‡æºè¦åŠƒç³»çµ±
+# JICC ¥ø·~¸ê·½³W¹º¨t²Î
+python -m pytest tests/ -v
 
-ä¸€å€‹åŸºæ–¼ FastAPI + React çš„ç¾ä»£åŒ– ERP ç³»çµ±ï¼Œå°ˆç‚ºä¸­å°ä¼æ¥­è¨­è¨ˆï¼Œæä¾›å®Œæ•´çš„æ¥­å‹™ç®¡ç†è§£æ±ºæ–¹æ¡ˆã€‚
 
-##  åŠŸèƒ½ç‰¹è‰²
+¤@­Ó°ò©ó FastAPI + React ªº²{¥N¤Æ ERP ¨t²Î¡A±M¬°¤¤¤p¥ø·~³]­p¡A´£¨Ñ§¹¾ãªº·~°ÈºŞ²z¸Ñ¨M¤è®×¡C
 
-### æ ¸å¿ƒæ¨¡å¡Š
-- **ç”¨æˆ¶ç®¡ç†** - å®Œæ•´çš„ç”¨æˆ¶èªè­‰èˆ‡æ¬Šé™æ§åˆ¶ç³»çµ±
-- **è²¡å‹™ç®¡ç†** - æ”¶å…¥/æ”¯å‡ºè¨˜éŒ„ã€ç™¼ç¥¨ç®¡ç†ã€è²¡å‹™å ±è¡¨
-- **åº«å­˜ç®¡ç†** - ç”¢å“ç®¡ç†ã€åº«å­˜é€²å‡ºã€ä¾›æ‡‰å•†ç®¡ç†
-- **éŠ·å”®ç®¡ç†** - å®¢æˆ¶ç®¡ç†ã€è¨‚å–®ç®¡ç†ã€å ±åƒ¹å–®ç³»çµ±
-- **æ¡è³¼ç®¡ç†** - ä¾›æ‡‰å•†ç®¡ç†ã€æ¡è³¼æµç¨‹ã€ä»˜æ¬¾ç®¡ç†
-- **å ±è¡¨åˆ†æ** - å¤šç¶­åº¦æ•¸æ“šåˆ†æèˆ‡å¯è¦–åŒ–å ±è¡¨
+##  ¥\¯à¯S¦â
 
-### æŠ€è¡“ç‰¹è‰²
-- **ç¾ä»£åŒ–æ¶æ§‹** - FastAPI + React + TypeScript
-- **éŸ¿æ‡‰å¼è¨­è¨ˆ** - æ”¯æŒå¤šè¨­å‚™è¨ªå•
-- **å¯¦æ™‚æ•¸æ“š** - WebSocket æ”¯æŒå¯¦æ™‚æ›´æ–°
-- **å®‰å…¨å¯é ** - JWT èªè­‰ã€æ•¸æ“šåŠ å¯†ã€æ¬Šé™æ§åˆ¶
-- **æ˜“æ–¼æ“´å±•** - æ¨¡å¡ŠåŒ–è¨­è¨ˆã€å¾®æœå‹™æ¶æ§‹æº–å‚™
+### ®Ö¤ß¼Ò¶ô
+- **¥Î¤áºŞ²z** - §¹¾ãªº¥Î¤á»{ÃÒ»PÅv­­±±¨î¨t²Î
+- **°]°ÈºŞ²z** - ¦¬¤J/¤ä¥X°O¿ı¡Bµo²¼ºŞ²z¡B°]°È³øªí
+- **®w¦sºŞ²z** - ²£«~ºŞ²z¡B®w¦s¶i¥X¡B¨ÑÀ³°ÓºŞ²z
+- **¾P°âºŞ²z** - «È¤áºŞ²z¡B­q³æºŞ²z¡B³ø»ù³æ¨t²Î
+- **±ÄÁÊºŞ²z** - ¨ÑÀ³°ÓºŞ²z¡B±ÄÁÊ¬yµ{¡B¥I´ÚºŞ²z
+- **³øªí¤ÀªR** - ¦hºû«×¼Æ¾Ú¤ÀªR»P¥iµø¤Æ³øªí
 
-##  ç³»çµ±è¦æ±‚
+### §Ş³N¯S¦â
+- **²{¥N¤Æ¬[ºc** - FastAPI + React + TypeScript
+- **ÅTÀ³¦¡³]­p** - ¤ä«ù¦h³]³Æ³X°İ
+- **¹ê®É¼Æ¾Ú** - WebSocket ¤ä«ù¹ê®É§ó·s
+- **¦w¥ş¥i¾a** - JWT »{ÃÒ¡B¼Æ¾Ú¥[±K¡BÅv­­±±¨î
+- **©ö©óÂX®i** - ¼Ò¶ô¤Æ³]­p¡B·LªA°È¬[ºc·Ç³Æ
 
-### é–‹ç™¼ç’°å¢ƒ
+##  ¨t²Î­n¨D
+
+### ¶}µoÀô¹Ò
 - Python 3.9+
 - Node.js 18+
-- PostgreSQL 14+ (ç”Ÿç”¢ç’°å¢ƒ)
-- Redis 6+ (ç·©å­˜)
+- PostgreSQL 14+ (¥Í²£Àô¹Ò)
+- Redis 6+ (½w¦s)
 - Git
 
-### ç”Ÿç”¢ç’°å¢ƒ
+### ¥Í²£Àô¹Ò
 - Docker & Docker Compose
-- Kubernetes (å¯é¸)
-- Nginx (åå‘ä»£ç†)
+- Kubernetes (¥i¿ï)
+- Nginx (¤Ï¦V¥N²z)
 
-##  å¿«é€Ÿé–‹å§‹
+##  §Ö³t¶}©l
 
-### 1. å…‹éš†é …ç›®
+### 1. §J¶©¶µ¥Ø
 ```bash
 git clone <repository-url>
 cd ji_erp
 ```
 
-### 2. å¾Œç«¯è¨­ç½®
+### 2. «áºİ³]¸m
 ```bash
-# å‰µå»ºè™›æ“¬ç’°å¢ƒ
+# ³Ğ«ØµêÀÀÀô¹Ò
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# å®‰è£ä¾è³´
+# ¦w¸Ë¨Ì¿à
 pip install -r requirements.txt
 
-# åˆå§‹åŒ–æ•¸æ“šåº«
+# ªì©l¤Æ¼Æ¾Ú®w
 python init_db.py
 
-# å•Ÿå‹•å¾Œç«¯æœå‹™
+# ±Ò°Ê«áºİªA°È
 python main.py
 ```
 
-### 3. å‰ç«¯è¨­ç½®
+### 3. «eºİ³]¸m
 ```bash
 cd frontend
 npm install
 npm start
 ```
 
-### 4. è¨ªå•ç³»çµ±
-- å¾Œç«¯ API: http://localhost:8000
-- å‰ç«¯æ‡‰ç”¨: http://localhost:3000
-- API æ–‡æª”: http://localhost:8000/docs
+### 4. ³X°İ¨t²Î
+- «áºİ API: http://localhost:8000
+- «eºİÀ³¥Î: http://localhost:3000
+- API ¤åÀÉ: http://localhost:8000/docs
 
-##  æ¸¬è©¦å¸³è™Ÿ
+##  ´ú¸Õ±b¸¹
 
-| è§’è‰² | ç”¨æˆ¶å | å¯†ç¢¼ | æ¬Šé™ |
+| ¨¤¦â | ¥Î¤á¦W | ±K½X | Åv­­ |
 |------|--------|------|------|
-| ç®¡ç†å“¡ | admin | admin123 | å…¨éƒ¨æ¬Šé™ |
-| è²¡å‹™ | finance | finance123 | è²¡å‹™æ¨¡å¡Š |
-| åº«å­˜ | inventory | inv123 | åº«å­˜æ¨¡å¡Š |
-| éŠ·å”® | sales | sales123 | éŠ·å”®æ¨¡å¡Š |
+| ºŞ²z­û | admin | admin123 | ¥ş³¡Åv­­ |
+| °]°È | finance | finance123 | °]°È¼Ò¶ô |
+| ®w¦s | inventory | inv123 | ®w¦s¼Ò¶ô |
+| ¾P°â | sales | sales123 | ¾P°â¼Ò¶ô |
 
-##  é …ç›®çµæ§‹
+##  ¶µ¥Øµ²ºc
 
 ```
 ji_erp/
- backend/                 # å¾Œç«¯ä»£ç¢¼
+ backend/                 # «áºİ¥N½X
     app/
-       api/            # API è·¯ç”±
-       core/           # æ ¸å¿ƒé…ç½®
-       models/         # æ•¸æ“šæ¨¡å‹
-       schemas/        # Pydantic æ¨¡å¼
-       services/       # æ¥­å‹™é‚è¼¯
-       utils/          # å·¥å…·å‡½æ•¸
-    tests/              # æ¸¬è©¦æ–‡ä»¶
-    requirements.txt    # Python ä¾è³´
- frontend/               # å‰ç«¯ä»£ç¢¼
+       api/            # API ¸ô¥Ñ
+       core/           # ®Ö¤ß°t¸m
+       models/         # ¼Æ¾Ú¼Ò«¬
+       schemas/        # Pydantic ¼Ò¦¡
+       services/       # ·~°ÈÅŞ¿è
+       utils/          # ¤u¨ã¨ç¼Æ
+    tests/              # ´ú¸Õ¤å¥ó
+    requirements.txt    # Python ¨Ì¿à
+ frontend/               # «eºİ¥N½X
     src/
-       components/     # React çµ„ä»¶
-       pages/          # é é¢çµ„ä»¶
-       hooks/          # è‡ªå®šç¾© Hooks
-       services/       # API æœå‹™
-       store/          # ç‹€æ…‹ç®¡ç†
-       utils/          # å·¥å…·å‡½æ•¸
+       components/     # React ²Õ¥ó
+       pages/          # ­¶­±²Õ¥ó
+       hooks/          # ¦Û©w¸q Hooks
+       services/       # API ªA°È
+       store/          # ª¬ºAºŞ²z
+       utils/          # ¤u¨ã¨ç¼Æ
     package.json
- docs/                   # é …ç›®æ–‡æª”
- docker/                 # Docker é…ç½®
- .cursorrules           # Cursor AI è¦å‰‡
- context.md             # é …ç›®ä¸Šä¸‹æ–‡
- README.md              # é …ç›®èªªæ˜
+ docs/                   # ¶µ¥Ø¤åÀÉ
+ docker/                 # Docker °t¸m
+ .cursorrules           # Cursor AI ³W«h
+ context.md             # ¶µ¥Ø¤W¤U¤å
+ README.md              # ¶µ¥Ø»¡©ú
 ```
 
-##  é–‹ç™¼æŒ‡å—
+##  ¶}µo«ü«n
 
-### ä»£ç¢¼è¦ç¯„
-- **Python**: éµå¾ª PEP 8 è¦ç¯„
-- **TypeScript**: ä½¿ç”¨åš´æ ¼æ¨¡å¼
-- **Git**: ä½¿ç”¨ Conventional Commits
-- **æ¸¬è©¦**: ä¿æŒ 80%+ æ¸¬è©¦è¦†è“‹ç‡
+### ¥N½X³W½d
+- **Python**: ¿í´` PEP 8 ³W½d
+- **TypeScript**: ¨Ï¥ÎÄY®æ¼Ò¦¡
+- **Git**: ¨Ï¥Î Conventional Commits
+- **´ú¸Õ**: «O«ù 80%+ ´ú¸ÕÂĞ»\²v
 
-### é–‹ç™¼æµç¨‹
-1. å‰µå»ºåŠŸèƒ½åˆ†æ”¯
-2. å¯¦ç¾åŠŸèƒ½ä¸¦ç·¨å¯«æ¸¬è©¦
-3. æäº¤ä»£ç¢¼ä¸¦å‰µå»º PR
-4. ä»£ç¢¼å¯©æŸ¥
-5. åˆä½µåˆ°ä¸»åˆ†æ”¯
+### ¶}µo¬yµ{
+1. ³Ğ«Ø¥\¯à¤À¤ä
+2. ¹ê²{¥\¯à¨Ã½s¼g´ú¸Õ
+3. ´£¥æ¥N½X¨Ã³Ğ«Ø PR
+4. ¥N½X¼f¬d
+5. ¦X¨Ö¨ì¥D¤À¤ä
 
-### ç’°å¢ƒè®Šé‡
+### Àô¹ÒÅÜ¶q
 ```bash
-# å¾Œç«¯ç’°å¢ƒè®Šé‡
+# «áºİÀô¹ÒÅÜ¶q
 DATABASE_URL=postgresql://user:password@localhost/ji_erp
 REDIS_URL=redis://localhost:6379
 SECRET_KEY=your-secret-key
 JWT_ALGORITHM=HS256
 JWT_EXPIRE_MINUTES=30
 
-# å‰ç«¯ç’°å¢ƒè®Šé‡
+# «eºİÀô¹ÒÅÜ¶q
 REACT_APP_API_URL=http://localhost:8000
 REACT_APP_WS_URL=ws://localhost:8000/ws
 ```
 
-##  API æ–‡æª”
+##  API ¤åÀÉ
 
-### èªè­‰ç«¯é»
-- `POST /api/auth/login` - ç”¨æˆ¶ç™»å…¥
-- `POST /api/auth/logout` - ç”¨æˆ¶ç™»å‡º
-- `POST /api/auth/refresh` - åˆ·æ–° Token
+### »{ÃÒºİÂI
+- `POST /api/auth/login` - ¥Î¤áµn¤J
+- `POST /api/auth/logout` - ¥Î¤áµn¥X
+- `POST /api/auth/refresh` - ¨ê·s Token
 
-### ç”¨æˆ¶ç®¡ç†
-- `GET /api/users` - ç²å–ç”¨æˆ¶åˆ—è¡¨
-- `POST /api/users` - å‰µå»ºç”¨æˆ¶
-- `PUT /api/users/{id}` - æ›´æ–°ç”¨æˆ¶
-- `DELETE /api/users/{id}` - åˆªé™¤ç”¨æˆ¶
+### ¥Î¤áºŞ²z
+- `GET /api/users` - Àò¨ú¥Î¤á¦Cªí
+- `POST /api/users` - ³Ğ«Ø¥Î¤á
+- `PUT /api/users/{id}` - §ó·s¥Î¤á
+- `DELETE /api/users/{id}` - §R°£¥Î¤á
 
-### è²¡å‹™ç®¡ç†
-- `GET /api/transactions` - ç²å–äº¤æ˜“è¨˜éŒ„
-- `POST /api/transactions` - å‰µå»ºäº¤æ˜“
-- `GET /api/reports/financial` - è²¡å‹™å ±è¡¨
+### °]°ÈºŞ²z
+- `GET /api/transactions` - Àò¨ú¥æ©ö°O¿ı
+- `POST /api/transactions` - ³Ğ«Ø¥æ©ö
+- `GET /api/reports/financial` - °]°È³øªí
 
-è©³ç´° API æ–‡æª”è«‹è¨ªå•: http://localhost:8000/docs
+¸Ô²Ó API ¤åÀÉ½Ğ³X°İ: http://localhost:8000/docs
 
-##  éƒ¨ç½²
+##  ³¡¸p
 
-### Docker éƒ¨ç½²
+### Docker ³¡¸p
 ```bash
-# æ§‹å»ºä¸¦å•Ÿå‹•æ‰€æœ‰æœå‹™
+# ºc«Ø¨Ã±Ò°Ê©Ò¦³ªA°È
 docker-compose up -d
 
-# æŸ¥çœ‹æœå‹™ç‹€æ…‹
+# ¬d¬İªA°Èª¬ºA
 docker-compose ps
 
-# æŸ¥çœ‹æ—¥èªŒ
+# ¬d¬İ¤é»x
 docker-compose logs -f
 ```
 
-### ç”Ÿç”¢ç’°å¢ƒéƒ¨ç½²
+### ¥Í²£Àô¹Ò³¡¸p
 ```bash
-# ä½¿ç”¨ Kubernetes
+# ¨Ï¥Î Kubernetes
 kubectl apply -f k8s/
 
-# æˆ–ä½¿ç”¨ Docker Swarm
+# ©Î¨Ï¥Î Docker Swarm
 docker stack deploy -c docker-compose.prod.yml ji-erp
 ```
 
-##  æ¸¬è©¦
+##  ´ú¸Õ
 
-### é‹è¡Œæ¸¬è©¦
+### ¹B¦æ´ú¸Õ
 ```bash
-# å¾Œç«¯æ¸¬è©¦
+# «áºİ´ú¸Õ
 cd backend
 pytest
 
-# å‰ç«¯æ¸¬è©¦
+# «eºİ´ú¸Õ
 cd frontend
 npm test
 
-# ç«¯åˆ°ç«¯æ¸¬è©¦
+# ºİ¨ìºİ´ú¸Õ
 npm run test:e2e
 ```
 
-### æ¸¬è©¦è¦†è“‹ç‡
+### ´ú¸ÕÂĞ»\²v
 ```bash
-# å¾Œç«¯è¦†è“‹ç‡
+# «áºİÂĞ»\²v
 pytest --cov=app tests/
 
-# å‰ç«¯è¦†è“‹ç‡
+# «eºİÂĞ»\²v
 npm run test:coverage
 ```
 
-##  æ€§èƒ½ç›£æ§
+##  ©Ê¯àºÊ±±
 
-### ç›£æ§æŒ‡æ¨™
-- API éŸ¿æ‡‰æ™‚é–“
-- æ•¸æ“šåº«æŸ¥è©¢æ€§èƒ½
-- å…§å­˜ä½¿ç”¨æƒ…æ³
-- éŒ¯èª¤ç‡çµ±è¨ˆ
+### ºÊ±±«ü¼Ğ
+- API ÅTÀ³®É¶¡
+- ¼Æ¾Ú®w¬d¸ß©Ê¯à
+- ¤º¦s¨Ï¥Î±¡ªp
+- ¿ù»~²v²Î­p
 
-### æ—¥èªŒç®¡ç†
-- æ‡‰ç”¨æ—¥èªŒ
-- éŒ¯èª¤æ—¥èªŒ
-- è¨ªå•æ—¥èªŒ
-- å¯©è¨ˆæ—¥èªŒ
+### ¤é»xºŞ²z
+- À³¥Î¤é»x
+- ¿ù»~¤é»x
+- ³X°İ¤é»x
+- ¼f­p¤é»x
 
-##  è²¢ç»æŒ‡å—
+##  °^Äm«ü«n
 
-1. Fork é …ç›®
-2. å‰µå»ºåŠŸèƒ½åˆ†æ”¯ (`git checkout -b feature/AmazingFeature`)
-3. æäº¤æ›´æ”¹ (`git commit -m 'Add some AmazingFeature'`)
-4. æ¨é€åˆ°åˆ†æ”¯ (`git push origin feature/AmazingFeature`)
-5. å‰µå»º Pull Request
+1. Fork ¶µ¥Ø
+2. ³Ğ«Ø¥\¯à¤À¤ä (`git checkout -b feature/AmazingFeature`)
+3. ´£¥æ§ó§ï (`git commit -m 'Add some AmazingFeature'`)
+4. ±À°e¨ì¤À¤ä (`git push origin feature/AmazingFeature`)
+5. ³Ğ«Ø Pull Request
 
-##  æ›´æ–°æ—¥èªŒ
+##  §ó·s¤é»x
 
 ### v1.0.0 (2024-01-01)
-- åˆå§‹ç‰ˆæœ¬ç™¼å¸ƒ
-- åŸºç¤ç”¨æˆ¶ç®¡ç†åŠŸèƒ½
-- ç°¡å–®çš„è²¡å‹™è¨˜éŒ„åŠŸèƒ½
+- ªì©lª©¥»µo¥¬
+- °òÂ¦¥Î¤áºŞ²z¥\¯à
+- Â²³æªº°]°È°O¿ı¥\¯à
 
-### v1.1.0 (è¨ˆåŠƒä¸­)
-- åº«å­˜ç®¡ç†æ¨¡å¡Š
-- å®¢æˆ¶é—œä¿‚ç®¡ç†
-- åŸºç¤å ±è¡¨åŠŸèƒ½
+### v1.1.0 (­p¹º¤¤)
+- ®w¦sºŞ²z¼Ò¶ô
+- «È¤áÃö«YºŞ²z
+- °òÂ¦³øªí¥\¯à
 
-##  è¨±å¯è­‰
+##  ³\¥iÃÒ
 
-æœ¬é …ç›®æ¡ç”¨ MIT è¨±å¯è­‰ - æŸ¥çœ‹ [LICENSE](LICENSE) æ–‡ä»¶äº†è§£è©³æƒ…
+¥»¶µ¥Ø±Ä¥Î MIT ³\¥iÃÒ - ¬d¬İ [LICENSE](LICENSE) ¤å¥ó¤F¸Ñ¸Ô±¡
 
-##  æ”¯æŒ
+##  ¤ä«ù
 
-- æ–‡æª”: [é …ç›®æ–‡æª”](docs/)
-- å•é¡Œåé¥‹: [GitHub Issues](https://github.com/your-repo/ji-erp/issues)
-- è¨è«–: [GitHub Discussions](https://github.com/your-repo/ji-erp/discussions)
+- ¤åÀÉ: [¶µ¥Ø¤åÀÉ](docs/)
+- °İÃD¤ÏõX: [GitHub Issues](https://github.com/your-repo/ji-erp/issues)
+- °Q½×: [GitHub Discussions](https://github.com/your-repo/ji-erp/discussions)
 
-##  è‡´è¬
+##  ­PÁÂ
 
-æ„Ÿè¬æ‰€æœ‰ç‚ºé€™å€‹é …ç›®åšå‡ºè²¢ç»çš„é–‹ç™¼è€…ï¼
+·PÁÂ©Ò¦³¬°³o­Ó¶µ¥Ø°µ¥X°^Ämªº¶}µoªÌ¡I
 
 ---
 
-**æ³¨æ„**: é€™æ˜¯ä¸€å€‹å­¸ç¿’å’Œé–‹ç™¼ä¸­çš„é …ç›®ï¼Œè«‹å‹¿åœ¨ç”Ÿç”¢ç’°å¢ƒä¸­ä½¿ç”¨æœªç¶“å……åˆ†æ¸¬è©¦çš„åŠŸèƒ½ã€‚
+**ª`·N**: ³o¬O¤@­Ó¾Ç²ß©M¶}µo¤¤ªº¶µ¥Ø¡A½Ğ¤Å¦b¥Í²£Àô¹Ò¤¤¨Ï¥Î¥¼¸g¥R¤À´ú¸Õªº¥\¯à¡C

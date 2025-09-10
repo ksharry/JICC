@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+"""
+JICC 主啟動腳本
+類似 Odoo 的 odoo-bin
+"""
+
+import sys
+import os
+from pathlib import Path
+
+# 添加項目根目錄到 Python 路徑
+project_root = Path(__file__).parent
+sys.path.insert(0, str(project_root))
+
+# 導入主應用
+from main import app
+import uvicorn
+
+def main():
+    """主函數"""
+    print(" 啟動 JICC 系統...")
+    print(" 訪問地址: http://localhost:8000")
+    print(" 測試帳號: admin/admin123 或 user1/user123")
+    print("=" * 50)
+    
+    # 從配置文件讀取設置
+    config_file = project_root / "jicc.conf"
+    if config_file.exists():
+        print(f" 使用配置文件: {config_file}")
+    
+    # 啟動服務器
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=8000,
+        reload=True,
+        log_level="info"
+    )
+
+if __name__ == "__main__":
+    main()
