@@ -24,10 +24,10 @@ jobs:
     
     - name: Test basic functionality
       run: |
-        python -c "import fastapi; print('FastAPI OK')"
-        python -c "import uvicorn; print('Uvicorn OK')"
-        python -c "import sqlalchemy; print('SQLAlchemy OK')"
-        python -c "import pydantic; print('Pydantic OK')"
+        python -c "import fastapi; print('FastAPI version:', fastapi.__version__)"
+        python -c "import uvicorn; print('Uvicorn imported successfully')"
+        python -c "import sqlalchemy; print('SQLAlchemy version:', sqlalchemy.__version__)"
+        python -c "import pydantic; print('Pydantic version:', pydantic.__version__)"
     
     - name: Show project structure
       run: |
